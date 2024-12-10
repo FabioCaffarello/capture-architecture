@@ -1,0 +1,16 @@
+# torrc configuration file
+
+# Define the primary SOCKS proxy port for Tor
+SocksPort 9050
+
+# Enable a control port to allow dynamic proxy IP rotation
+ControlPort 9051
+
+# Enable cookie authentication for secure control
+CookieAuthentication 1
+
+# Optional: Set a specific DataDirectory for Tor to store its data
+DataDirectory /var/lib/tor
+
+# Configure logging (use 'notice' level for minimal logs)
+Log notice stdout
