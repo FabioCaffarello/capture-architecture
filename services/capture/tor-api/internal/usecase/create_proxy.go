@@ -21,4 +21,5 @@ func (u *CreateProxyUseCase) Execute() {
 	if err != nil {
 		panic(err)
 	}
+	proxyEntity.Enable()
 }
