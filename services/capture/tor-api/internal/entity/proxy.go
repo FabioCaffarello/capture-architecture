@@ -18,9 +18,9 @@ type Proxy struct {
 }
 
 type ProxyEntityProps struct {
-	ID     string
-	IP     string
-	Port   int
+	ID   string
+	IP   string
+	Port int
 }
 
 func NewProxy(props ProxyEntityProps) (*Proxy, error) {

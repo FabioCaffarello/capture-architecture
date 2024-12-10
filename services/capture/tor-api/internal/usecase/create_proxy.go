@@ -5,7 +5,6 @@ import (
 )
 
 type CreateProxyUseCase struct {
-
 }
 
 func NewCreateProxyUseCase() *CreateProxyUseCase {
@@ -14,8 +13,8 @@ func NewCreateProxyUseCase() *CreateProxyUseCase {
 
 func (u *CreateProxyUseCase) Execute() {
 	entityProps := entity.ProxyEntityProps{
-		ID: "1",
-		IP: "",
+		ID:   "1",
+		IP:   "",
 		Port: 8000,
 	}
 	proxyEntity, err := entity.NewProxy(entityProps)
