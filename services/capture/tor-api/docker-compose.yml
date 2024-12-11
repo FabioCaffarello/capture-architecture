@@ -4,11 +4,6 @@ services:
     container_name: tor-api
     ports:
       - 8000:8000
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://tor-api:8000/healthz"]
-      interval: 10s
-      timeout: 1s
-      retries: 5
     networks:
       - tor-api-network
 

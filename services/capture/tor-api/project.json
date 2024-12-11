@@ -12,7 +12,7 @@
       "executor": "nx:run-commands",
       "dependsOn": ["tidy"],
       "options": {
-        "command": "GOOS=linux CGO_ENABLED=0 GOARCH=amd64 go build -ldflags=\"-w -s\" -o dist/server ./cmd/main.go",
+        "command": "GOOS=linux CGO_ENABLED=1 GOARCH=amd64 go build -ldflags=\"-w -s\" -o dist/server ./cmd/main.go",
         "cwd": "{projectRoot}"
       }
     },
@@ -29,6 +29,14 @@
       "dependsOn": ["image"],
       "options": {
         "command": "docker-compose up -d",
+        "cwd": "{projectRoot}"
+      }
+    },
+    "logs": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["e2e"],
+      "options": {
+        "command": "docker logs -f tor-api",
         "cwd": "{projectRoot}"
       }
     },
